@@ -2,45 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Python MySQL stock screener</title>
-
+    <!--<title>Python MySQL stock screener</title>-->
+    <title>{{ title }}</title>
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
 </head>
 <body>
+<img src="{{ url_for('fig', stock = title) }}" alt="Image Placeholder" height="100">
 <div class="container">
 
     <div class="jumbotron">
         <h1>Python MySQL stock screener</h1>
         <p class="lead"></p>
-        <p><a class="btn btn-lg btn-success" href="quickstart" role="button">Quick Start</a>
+        <p><a class="btn btn-lg btn-success" href="overview" role="button">Quick Start</a>
         </p>
     </div>
     <h2>Sectoral Analysis</h2>
     <div class="row marketing">
 
         <div class="col-lg-6">
-            <h4>Cement</h4>
+
+            <a href="http://127.0.0.1:5000/cement"><h4>Cement</h4></a>
             <p>ACC, Ambuja, Heidelberg cem, India cements, JK Cements, Ramco, Ultratech, Dalmia</p>
 
-            <h4>Information Technology</h4>
+            <a href="http://127.0.0.1:5000/it"><h4>Information Technology</h4></a>
             <p>HCL Tech, Infosys, TCS, 8K Miles, Mindtree, MphasiS, Tech Mahindra, NIIT</p>
 
-            <h4>Banking</h4>
+            <a href="http://127.0.0.1:5000/banking"><h4>Banking</h4></a>
             <p>SBI, Axis, Bandhan, HDFC, ICICI, Karur vysya, Yes bank, kotak mahindra</p>
         </div>
 
         <div class="col-lg-6">
-            <h4>FMCG</h4>
-            <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+            <a href="http://127.0.0.1:5000/food"><h4>Food</h4></a>
+            <p>Brittania, coffee day, hatsun agro, heritage foods, kohinoor foods, kwality, vadilal, Future consumer</p>
 
-            <h4>Pharma</h4>
-            <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet
-                fermentum.</p>
+            <a href="http://127.0.0.1:5000/pharma"><h4>Pharma</h4></a>
+            <p>Aarti drugs, ajanta pharma, sun pharma, biocon, cipla, dr. reddys, GlaxoSmithKline, Pfizer</p>
 
-            <h4>Energy, oil and gas</h4>
-            <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+            <a href="http://127.0.0.1:5000/misc"><h4>miscellaneous</h4></a>
+            <p>Finolex, Pidilite, Guj Ind Power, Power grid corp, Schneider infra, Torrent power, Kalpataru Power, KEC Intl</p>
         </div>
     </div>
 
@@ -52,3 +53,4 @@
 
 </body>
 </html>
+

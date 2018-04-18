@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <h1>Sector - {{ title }}</h1>
+</head>
+<body>
+<h2>{{ extra }}</h2>
+<p>{{ data[0]|safe }}</p>
+<img src="{{ url_for('fig', stock = data[0]) }}" alt="Image Placeholder" height="400">
+
+<p>{{ data[1]|safe }}</p>
+<img src="{{ url_for('fig', stock = data[1]) }}" alt="Image Placeholder" height="400">
+
+<p>{{ data[2]|safe }}</p>
+<img src="{{ url_for('fig', stock = data[2]) }}" alt="Image Placeholder" height="400">
+
+<p>{{ data[3]|safe }}</p>
+<img src="{{ url_for('fig', stock = data[3]) }}" alt="Image Placeholder" height="400">
+
+<p>{{ data[4]|safe }}</p>
+<img src="{{ url_for('fig', stock = data[4]) }}" alt="Image Placeholder" height="400">
+
+<p>{{ data[5]|safe }}</p>
+<img src="{{ url_for('fig', stock = data[5]) }}" alt="Image Placeholder" height="400">
+
+<p>{{ data[6]|safe }}</p>
+<img src="{{ url_for('fig', stock = data[6]) }}" alt="Image Placeholder" height="400">
+
+<p>{{ data[7]|safe }}</p>
+<img src="{{ url_for('fig', stock = data[7]) }}" alt="Image Placeholder" height="400">
+
+<script type="text/javascript">
+    function test_func(data) {
+        var list = data
+        console.log(list);
+    }
+    test_func({{ data|safe }})
+    </script>
+</body>
+</html>
