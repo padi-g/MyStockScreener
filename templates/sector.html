@@ -31,12 +31,5 @@
 <p>{{ data[7]|safe }}</p>
 <img src="{{ url_for('fig', stock = data[7]) }}" alt="Image Placeholder" height="400">
 
-<script type="text/javascript">
-    function test_func(data) {
-        var list = data
-        console.log(list);
-    }
-    test_func({{ data|safe }})
-    </script>
 </body>
 </html>
