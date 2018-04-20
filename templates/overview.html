@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Overview - Daily winners</title>
+</head>
+<body>
+<p></p>
+
+<center>
+    <img src="{{ url_for('fig', stock = data['cement'][0]) }}" alt="Image Placeholder" height="400">
+    <p>{{ data['cement'][0]|safe}} {{ data['cement'][1]|safe }}% change</p>
+
+    <img src="{{ url_for('fig', stock = data['food'][0]) }}" alt="Image Placeholder" height="400">
+    <p>{{ data['food'][0]|safe }} {{ data['food'][1]|safe }}% change</p>
+
+    <img src="{{ url_for('fig', stock = data['banking'][0]) }}" alt="Image Placeholder" height="400">
+    <p>{{ data['banking'][0]|safe }} {{ data['banking'][1]|safe }}% change</p>
+
+    <img src="{{ url_for('fig', stock = data['infotech'][0]) }}" alt="Image Placeholder" height="400">
+    <p>{{ data['infotech'][0]|safe }} {{ data['infotech'][1]|safe }}% change</p>
+
+    <img src="{{ url_for('fig', stock = data['pharma'][0]) }}" alt="Image Placeholder" height="400">
+    <p>{{ data['pharma'][0]|safe }} {{ data['pharma'][1]|safe }}% change</p>
+
+    <img src="{{ url_for('fig', stock = data['misc'][0]) }}" alt="Image Placeholder" height="400">
+    <p>{{ data['misc'][0]|safe }} {{ data['misc'][1]|safe }}% change</p>
+
+</center>
+
+</body>
+</html>

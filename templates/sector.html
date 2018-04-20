@@ -3,33 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
-    <h1>Sector - {{ title }}</h1>
+    <center><h1>Sector - {{ title }}</h1></center>
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
 </head>
+
 <body>
-<h2>{{ extra }}</h2>
-<p>{{ data[0]|safe }}</p>
-<img src="{{ url_for('fig', stock = data[0]) }}" alt="Image Placeholder" height="400">
+<h3>{{ extra }}</h3>
+<center>
+    <img src="{{ url_for('fig', stock = data[0]) }}" alt="Image Placeholder" height="400">
+    <p>{{ data[0]|safe }}</p>
 
-<p>{{ data[1]|safe }}</p>
-<img src="{{ url_for('fig', stock = data[1]) }}" alt="Image Placeholder" height="400">
+    <img src="{{ url_for('fig', stock = data[1]) }}" alt="Image Placeholder" height="400">
+    <p>{{ data[1]|safe }}</p>
 
-<p>{{ data[2]|safe }}</p>
-<img src="{{ url_for('fig', stock = data[2]) }}" alt="Image Placeholder" height="400">
+    <img src="{{ url_for('fig', stock = data[2]) }}" alt="Image Placeholder" height="400">
+    <p>{{ data[2]|safe }}</p>
 
-<p>{{ data[3]|safe }}</p>
-<img src="{{ url_for('fig', stock = data[3]) }}" alt="Image Placeholder" height="400">
+    <img src="{{ url_for('fig', stock = data[3]) }}" alt="Image Placeholder" height="400">
+    <p>{{ data[3]|safe }}</p>
 
-<p>{{ data[4]|safe }}</p>
-<img src="{{ url_for('fig', stock = data[4]) }}" alt="Image Placeholder" height="400">
+    <img src="{{ url_for('fig', stock = data[4]) }}" alt="Image Placeholder" height="400">
+    <p>{{ data[4]|safe }}</p>
 
-<p>{{ data[5]|safe }}</p>
-<img src="{{ url_for('fig', stock = data[5]) }}" alt="Image Placeholder" height="400">
+    <img src="{{ url_for('fig', stock = data[5]) }}" alt="Image Placeholder" height="400">
+    <p>{{ data[5]|safe }}</p>
 
-<p>{{ data[6]|safe }}</p>
-<img src="{{ url_for('fig', stock = data[6]) }}" alt="Image Placeholder" height="400">
+    <img src="{{ url_for('fig', stock = data[6]) }}" alt="Image Placeholder" height="400">
+    <p>{{ data[6]|safe }}</p>
 
-<p>{{ data[7]|safe }}</p>
-<img src="{{ url_for('fig', stock = data[7]) }}" alt="Image Placeholder" height="400">
+    <img src="{{ url_for('fig', stock = data[7]) }}" alt="Image Placeholder" height="400">
+    <p>{{ data[7]|safe }}</p></center>
 
 </body>
 </html>
