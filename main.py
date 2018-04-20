@@ -236,7 +236,7 @@ def aid_overview():
 if __name__ == "__main__":
     conn = mysql.connect()
     cursor = conn.cursor()
-    app.run()
+    app.run(host='0.0.0.0')
 
 '''
 
@@ -262,9 +262,12 @@ create table OIL(trading_date date primary key, open decimal(10,2), close decima
 TODO : EXCEPTIONS
 TODO : Loading spinner
 
+TODO : hardcoded link to relative link
 TODO : drop all tables and test again
 TODO : search option
 TODO : document all problems
 TODO : create readme for open sourcing and fudge database passwords
+
+TODO : select symbol, name_of_company from companies where symbol like '%blah%' OR name_of_company like '%blah%'
 
 '''
