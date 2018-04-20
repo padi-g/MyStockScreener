@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Overview - Daily winners</title>
+    <title>Python MySQL stock screener</title>
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
-
 </head>
 <body>
 
@@ -14,8 +13,8 @@
     <div class="header"
          style="border-bottom: 1px solid #e5e5e5; margin-top: 0; margin-bottom: 0; line-height: 20px;padding-bottom: 12px;">
         <ul class="nav nav-pills pull-right">
-            <li><a href="/">Home</a></li>
-            <li class="active"><a href="/overview">Overview</a></li>
+            <li><a href="#">Home</a></li>
+            <li class="active"><a href="http://127.0.0.1:5000/overview">Overview</a></li>
         </ul>
         <h3 class="text-muted">Stock Screener</h3>
     </div>
@@ -26,34 +25,28 @@
             <p class="lead">Last 5 days trading data to show short term trends in each sector</p>
         </div>
 
-
         <center>
             <img src="{{ url_for('fig', stock = data['cement'][0]) }}" alt="Image Placeholder" height="400">
-            <h4>{{ data['cement'][0]|safe}}</h4>
-            <p> {{ data['cement'][1]|safe }}% change</p>
+            <p>{{ data['cement'][0]|safe}} {{ data['cement'][1]|safe }}% change</p>
 
             <img src="{{ url_for('fig', stock = data['food'][0]) }}" alt="Image Placeholder" height="400">
-            <h4>{{ data['food'][0]|safe }}</h4>
-            <p> {{ data['food'][1]|safe }}% change</p>
+            <p>{{ data['food'][0]|safe }} {{ data['food'][1]|safe }}% change</p>
 
             <img src="{{ url_for('fig', stock = data['banking'][0]) }}" alt="Image Placeholder" height="400">
-            <h4>{{ data['banking'][0]|safe }} </h4>
-            <p> {{ data['banking'][1]|safe }}% change</p>
+            <p>{{ data['banking'][0]|safe }} {{ data['banking'][1]|safe }}% change</p>
 
             <img src="{{ url_for('fig', stock = data['infotech'][0]) }}" alt="Image Placeholder" height="400">
-            <h4>{{ data['infotech'][0]|safe }}</h4>
-            <p> {{ data['infotech'][1]|safe }}% change</p>
+            <p>{{ data['infotech'][0]|safe }} {{ data['infotech'][1]|safe }}% change</p>
 
             <img src="{{ url_for('fig', stock = data['pharma'][0]) }}" alt="Image Placeholder" height="400">
-            <h4>{{ data['pharma'][0]|safe }}</h4>
-            <p> {{ data['pharma'][1]|safe }}% change</p>
+            <p>{{ data['pharma'][0]|safe }} {{ data['pharma'][1]|safe }}% change</p>
 
             <img src="{{ url_for('fig', stock = data['misc'][0]) }}" alt="Image Placeholder" height="400">
-            <h4>{{ data['misc'][0]|safe }}</h4>
-            <p> {{ data['misc'][1]|safe }}% change</p>
+            <p>{{ data['misc'][0]|safe }} {{ data['misc'][1]|safe }}% change</p>
 
         </center>
     </div>
+
 
     <footer class="footer" style="padding-top: 19px;  color: #777;border-top: 1px solid #e5e5e5;">
         <p>&copy; Gautam Padiyar<br>&copy; Aditya Subramanian</p>

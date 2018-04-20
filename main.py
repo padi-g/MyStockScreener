@@ -30,9 +30,21 @@ prcnt_values = {'pharma': ["ACC", 0.0],
                 'misc': ["ACC", 0.0]}
 
 
-@app.route("/")
+@app.route("/", methods=['GET', 'POST'])
 def main():
-    return render_template('index.html')
+    if request.method == 'GET':
+        return render_template('index.html')
+    if request.method == 'POST':
+        search = request.form['search']
+        print(search)
+        query = "select symbol, name_of_company from companies where symbol " \
+                "like '%" + search + "%' OR name_of_company like '%" + search + "%';"
+        cursor.execute(query)
+        data = cursor.fetchone()
+        if data is None:
+            return render_template('index.html')
+        print(data)
+        return render_template('search.html', search=data)
 
 
 @app.route('/fig/<stock>')
@@ -57,25 +69,6 @@ def graph_content(symbol):
     plt.xlabel("Date")
     plt.xticks(rotation=10)
     plt.plot(data1, data2)
-
-
-@app.route('/test', methods=['GET', 'POST'])
-def samplefunction():
-    stock = "GGG"
-    if request.method == 'GET':
-        return render_template('images.html', title=stock)
-    if request.method == 'POST':
-        greetIn = ['hey', 'hi', 'hey there', 'hi there', 'hello', 'hola', 'yoo']
-        greetOut = ['hey there!', 'hi!', 'hi there!', 'hey!']
-
-        human1 = request.form['human']
-
-        if human1 in greetIn:
-            bot = random.choice(greetOut)
-            return render_template('images.html', bot=bot, title=stock)
-        else:
-            bot = 'Sorry..no idea!!!'
-            return render_template('images.html', bot=bot, title=stock)
 
 
 @app.route('/sector/<sector>')
@@ -258,16 +251,14 @@ if __name__ == "__main__":
 
     Endpoints :
 
-create table OIL(trading_date date primary key, open decimal(10,2), close decimal(10,2), high decimal(10,2), low decimal(10,2), last decimal(10,2), quantity decimal(10,2), turnover decimal(10,2));
 TODO : EXCEPTIONS
 TODO : Loading spinner
 
-TODO : hardcoded link to relative link
 TODO : drop all tables and test again
-TODO : search option
 TODO : document all problems
 TODO : create readme for open sourcing and fudge database passwords
+TODO : 5 DAY data load instead of 100
 
-TODO : select symbol, name_of_company from companies where symbol like '%blah%' OR name_of_company like '%blah%'
+TODO : pressing home on overview page
 
 '''

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <center><h1>Search - {{ search[1] }}</h1></center>
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+
+</head>
+<body>
+<center>
+    <img src="{{ url_for('fig', stock = search[0]) }}" alt="Image Placeholder" height="600">
+    <p>{{ search[0]|safe }} - {{search[1]}}</p>
+</center>
+</body>
+</html>

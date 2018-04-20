@@ -4,48 +4,65 @@
     <meta charset="UTF-8">
     <title>Python MySQL stock screener</title>
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
+	<div class="header" style="border-bottom: 1px solid #e5e5e5; margin-top: 0; margin-bottom: 0; line-height: 20px;padding-bottom: 12px;">
+		<ul class="nav nav-pills pull-right">
+			<li class="active"><a href="/">Home</a></li>
+			<li><a href="/overview">Overview</a></li>
+		</ul>
+		<h3 class="text-muted">Stock Screener</h3>
+</div>
 
-    <div class="jumbotron">
-        <h1>Python MySQL stock screener</h1>
-        <p class="lead"></p>
-        <p><a class="btn btn-lg btn-success" href="http://127.0.0.1:5000/overview" role="button">Overview</a>
-        </p>
-    </div>
+<div class="container" style="padding-top: 19px;">
+	<div class="jumbotron">
+		<h1>Python MySQL stock screener</h1>
+		<p class="lead">Your one stop, for your daily stock updates(or something along these lines)</p>
+		<form>
+			<div class="input-group" style="padding-top: 40px">
+				<input type="text" class="form-control" placeholder="Search">
+				<div class="input-group-btn">
+					<button class="btn btn-default" type="submit">
+						<i class="glyphicon glyphicon-search"></i>
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
     <h2>Sectoral Analysis</h2>
     <div class="row marketing">
 
         <div class="col-lg-6">
 
-            <a href="http://127.0.0.1:5000/sector/cement"><h4>Cement</h4></a>
-            <p>ACC, Ambuja, Heidelberg cem, India cements, JK Cements, Ramco, Ultratech, Dalmia</p>
+            <a href="/sector/cement"><h4>Cement Manufacturing</h4></a>
+            <p>ACC, Ambuja Cements, Heidelberg Cements, India Cements, JK Cements, Ramco, Ultratech, Dalmia</p>
 
-            <a href="http://127.0.0.1:5000/sector/infotech"><h4>Information Technology</h4></a>
-            <p>HCL Tech, Infosys, TCS, 8K Miles, Mindtree, MphasiS, Tech Mahindra, NIIT</p>
+            <a href="/sector/infotech"><h4>Information Technology</h4></a>
+            <p>HCL Technologies, Infosys, Tata Consultancy Services, 8K Miles, Mindtree, MphasiS, Tech Mahindra, NIIT</p>
 
-            <a href="http://127.0.0.1:5000/sector/banking"><h4>Banking</h4></a>
-            <p>SBI, Axis, Canara, HDFC, ICICI, Karur vysya, Yes bank, kotak mahindra</p>
+            <a href="/sector/banking"><h4>Banking</h4></a>
+            <p>State Bank of India, Axis Bank, Canara Bank, HDFC Bank, ICICI Bank, KarurVysya, Yes Bank, Kotak Mahindra</p>
         </div>
 
         <div class="col-lg-6">
-            <a href="http://127.0.0.1:5000/sector/food"><h4>Food</h4></a>
-            <p>Brittania, coffee day, hatsun agro, apex, kohinoor foods, kwality, vadilal, Future consumer</p>
+            <a href="/sector/food"><h4>Food Processing</h4></a>
+            <p>Britannia, coffee day, hatsun agro, apex, kohinoor foods, kwality, vadilal, Future consumer</p>
 
-            <a href="http://127.0.0.1:5000/sector/pharma"><h4>Pharma</h4></a>
+            <a href="/sector/pharma"><h4>Pharmaceuticals</h4></a>
             <p>Aarti drugs, ajanta pharma, sun pharma, biocon, cipla, dr. reddys, GlaxoSmithKline, Pfizer</p>
 
-            <a href="http://127.0.0.1:5000/sector/misc"><h4>miscellaneous</h4></a>
-            <p>Finolex, Pidilite, Guj Ind Power, Power grid corp, Schneider infra, Torrent power, Kalpataru Power, KEC Intl</p>
+            <a href="/sector/misc"><h4>Miscellaneous</h4></a>
+            <p>Finolex, Pidilite, Guj Ind Power, Power grid corp, Schneider infra, Torrent power, Kalpataru Power, KEC
+                International</p>
         </div>
     </div>
 
-    <footer class="footer">
-        <p>&copy; Gautam Padiyar<br>&copy; Aditya Subramanian</p>
-    </footer>
+    <footer class="footer" style="padding-top: 19px;  color: #777;border-top: 1px solid #e5e5e5;">
+		<p>&copy; Gautam Padiyar<br>&copy; Aditya Subramanian</p>
+	</footer>
 
 </div>
 

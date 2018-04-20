@@ -3,38 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
-    <center><h1>Sector - {{ title }}</h1></center>
 
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
 </head>
 
 <body>
-<h3></h3>
+<div class="container">
+        <div class="jumbotron">
+            <center><h1>Sector - {{ title }}</h1></center>
+        </div>
+    </div>
+
 <center>
     <img src="{{ url_for('fig', stock = data[0]) }}" alt="Image Placeholder" height="400">
-    <p>{{ data[0]|safe }}</p>
+    <h4>{{ data[0]|safe }}</h4>
 
     <img src="{{ url_for('fig', stock = data[1]) }}" alt="Image Placeholder" height="400">
-    <p>{{ data[1]|safe }}</p>
+    <h4>{{ data[1]|safe }}</h4>
 
     <img src="{{ url_for('fig', stock = data[2]) }}" alt="Image Placeholder" height="400">
-    <p>{{ data[2]|safe }}</p>
+    <h4>{{ data[2]|safe }}</h4>
 
     <img src="{{ url_for('fig', stock = data[3]) }}" alt="Image Placeholder" height="400">
-    <p>{{ data[3]|safe }}</p>
+    <h4>{{ data[3]|safe }}</h4>
 
     <img src="{{ url_for('fig', stock = data[4]) }}" alt="Image Placeholder" height="400">
-    <p>{{ data[4]|safe }}</p>
+    <h4>{{ data[4]|safe }}</h4>
 
     <img src="{{ url_for('fig', stock = data[5]) }}" alt="Image Placeholder" height="400">
-    <p>{{ data[5]|safe }}</p>
+    <h4>{{ data[5]|safe }}</h4>
 
     <img src="{{ url_for('fig', stock = data[6]) }}" alt="Image Placeholder" height="400">
-    <p>{{ data[6]|safe }}</p>
+    <h4>{{ data[6]|safe }}</h4>
 
     <img src="{{ url_for('fig', stock = data[7]) }}" alt="Image Placeholder" height="400">
-    <p>{{ data[7]|safe }}</p></center>
+    <h4>{{ data[7]|safe }}</h4></center>
+
+    <footer class="footer" style="padding-top: 19px;  color: #777;border-top: 1px solid #e5e5e5;">
+		<p>&copy; Gautam Padiyar<br>&copy; Aditya Subramanian</p>
+	</footer>
 
 </body>
 </html>
