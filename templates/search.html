@@ -2,17 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Search</title>
-    <center><h1>Search - {{ search[1] }}</h1></center>
+    <title>{{ title }}</title>
 
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
-
 </head>
+
 <body>
+<div class="container">
+        <div class="jumbotron">
+            <center><h2>{{ search[1] }}</h2></center>
+    </div>
+
 <center>
     <img src="{{ url_for('fig', stock = search[0]) }}" alt="Image Placeholder" height="600">
     <p>{{ search[0]|safe }} - {{search[1]}}</p>
 </center>
+
+<footer class="footer" style="padding-top: 19px;  color: #777;border-top: 1px solid #e5e5e5;">
+	<p>&copy; Gautam Padiyar<br>&copy; Aditya Subramanian</p>
+</footer>
+</div>
 </body>
 </html>

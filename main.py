@@ -41,8 +41,7 @@ def main():
                 "like '%" + search + "%' OR name_of_company like '%" + search + "%';"
         cursor.execute(query)
         data = cursor.fetchone()
-        if data is None:
-            return render_template('index.html')
+
         print(data)
         return render_template('search.html', search=data)
 
